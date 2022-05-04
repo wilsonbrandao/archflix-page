@@ -142,7 +142,7 @@ function GeraBanner(projetos) {
     const paragrafoBanner = document.querySelector("#paragrafo-banner");
     randomBanner = Math.floor(Math.random() * (projetos.length - 1));
 
-    imgBanner.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.3), rgba(20, 20, 20,0.99) 100%), url(archflix-page/img/projects/" + projetos[randomBanner].banner + ")";
+    imgBanner.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.3), rgba(20, 20, 20,0.99) 100%), url(../img/projects/" + projetos[randomBanner].banner + ")";
     tituloBanner.textContent = projetos[randomBanner].titulo;
     paragrafoBanner.textContent = projetos[randomBanner].paragrafoBanner;
     GerarModal(randomBanner, projetos);
