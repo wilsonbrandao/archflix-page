@@ -5,6 +5,7 @@ function ModalMaisInfo(modalID) {
     modal.addEventListener('click', desativaModal);
 }
 
+
 function desativaModal (event){
     const modal = document.getElementById("modal-mais-informacoes");
     const body = document.querySelector("#scroll");

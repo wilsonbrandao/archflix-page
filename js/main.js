@@ -146,6 +146,7 @@ function GeraBanner(projetos) {
     tituloBanner.textContent = projetos[randomBanner].titulo;
     paragrafoBanner.textContent = projetos[randomBanner].paragrafoBanner;
     GerarModal(randomBanner, projetos);
+    
 }
 
 
