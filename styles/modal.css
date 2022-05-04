@@ -1,0 +1,97 @@
+.scroll {
+    overflow: hidden;
+}
+.modal-container.mostrar-modal {
+    display: flex;
+    overflow: scroll;
+}
+
+.modal-container {
+    height: 100vh;;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.mostrar-modal .modal-content {
+    animation: modal 1.5s;
+}
+
+.modal-content {
+    background: #141414;
+    height: auto;
+    margin-top: 50px;
+    min-height: 90%;
+    width: 50%;
+    min-width: 300px;
+    border-radius: 5px;
+}
+
+.modal-banner {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(20, 20, 20, 0.99) 100%), url("");
+    height: 400px;
+    background-size: cover;
+    background-position-y: bottom;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px 0px;
+}
+
+.modal-descricao {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.modal-descricao .titulo {
+    margin-top: 50%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.modal-descricao .buttons {
+    margin-top: 30px;
+}
+
+.modal-info-projeto {
+    height: 100%;
+    background: transparent;
+    margin: 0px 40px 20px 40px; 
+    text-align: justify;
+}
+.modal-info-projeto p {
+    font-family: 'Arial', sans-serif;
+    background-color: transparent;
+    line-height: 25px;
+}
+
+.fechar-modal {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #141414;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}

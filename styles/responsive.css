@@ -1,0 +1,20 @@
+@media screen and (max-width: 700px) {
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .button {
+        margin-top: 5px;
+        width: 200px;
+    }
+    main .projeto-banner .descricao-banner {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    main .projeto-banner .descricao-banner {
+        width: 70%
+    }
+}
