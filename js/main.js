@@ -1,3 +1,4 @@
+/* "Banco de Dados" */
 const projetos = [
     {
         titulo: 'Edifício Copan',
@@ -86,6 +87,8 @@ const projetos = [
     }, {}
 ]
 
+/* Programa */
+
 let randomBanner = "";
 
 const buttonVerProjeto = document.querySelector("#button-ver-projeto");
@@ -142,7 +145,7 @@ function GeraBanner(projetos) {
     const paragrafoBanner = document.querySelector("#paragrafo-banner");
     randomBanner = Math.floor(Math.random() * (projetos.length - 1));
 
-    imgBanner.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.3), rgba(20, 20, 20,0.99) 100%), url(archflix-page/img/projects/" + projetos[randomBanner].banner + ")";
+    imgBanner.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.3), rgba(20, 20, 20,0.99) 100%), url(img/projects/" + projetos[randomBanner].banner + ")";
     tituloBanner.textContent = projetos[randomBanner].titulo;
     paragrafoBanner.textContent = projetos[randomBanner].paragrafoBanner;
     GerarModal(randomBanner, projetos);
@@ -155,7 +158,7 @@ function GerarModal(random, projetos) {
     const tituloModal = document.querySelector("#titulo-modal");
     const paragrafoModal = document.querySelector("#texto-descricao");
     
-    imgBannerModal.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.3), rgba(20, 20, 20,0.99) 100%), url(../img/projects/" + projetos[random].banner + ")";
+    imgBannerModal.style.backgroundImage = "linear-gradient(rgba(0, 0, 0, 0.85), rgba(20, 20, 20, 0.3), rgba(20, 20, 20,0.99) 100%), url(img/projects/" + projetos[random].banner + ")";
     tituloModal.textContent = projetos[random].titulo;
     paragrafoModal.textContent = projetos[random].textoDescricao;
 }
@@ -173,7 +176,7 @@ function CriarVerProjeto(projetos) {
     conteudoProjeto.appendChild(criarParagrafo(projetos[randomBanner].autorTexto));
 
     projetos[randomBanner].imagens.forEach((imagemSrc) => {
-        let imgSrc = "../img/projects/" + imagemSrc;
+        let imgSrc = "img/projects/" + imagemSrc;
         let elementoImg = criarImgProjeto(imgSrc, "img-projeto");
         conteudoProjeto.appendChild(elementoImg);
     });
