@@ -181,3 +181,15 @@ header nav a:hover {
 .conteudo-ver-projeto {
     animation: conteudo-projeto 1.5s;
 }
+
+footer {
+    text-align: center;
+    border-top:2px solid #e50914be;
+    margin-top: 20px;
+    display: block;
+    height: 50px;
+}
+ footer p {
+     margin-top: 15px;
+     font-weight: bold;
+ }
